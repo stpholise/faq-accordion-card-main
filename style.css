@@ -1,0 +1,254 @@
+@import url("https://fonts.google.com/specimen/Kumbh+Sans");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+    font-size:12px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Kumbh Sans", 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: 400;
+    background-color: var(--Soft-violet);
+    margin: auto;
+    padding: 1rem;
+}
+
+.m-container {
+    width: 80%;
+    height: 80%;
+    margin: 4rem auto;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    background-color: #fff;
+
+}
+
+.lt {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-position-x: 130%;
+    background-position-y: 70%;
+    position: relative;
+
+}
+
+.w-container {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.mobile-img{
+    display:none;
+}
+.w-online {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 2rem;
+    left: -5rem;
+    overflow-x: hidden;
+}
+
+.box-img {
+    position: absolute;
+    left: -7rem;
+    top: 15rem;
+}
+
+
+.rt {
+    padding: 3rem 2rem;
+    line-height: 1.5;
+    text-align: left;
+    width: 90%;
+}
+
+.rt h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+}
+
+.q-a {
+    width: 100%;
+    padding:1rem 0.5rem;
+    border-bottom: 1px solid var(--Light-grayish-blue);
+}
+.quest {
+    width:100%;
+    position:relative;
+    font-size:1.2rem;
+   cursor: pointer;
+
+}
+
+.arrow-down {
+    position: absolute;
+    right: 0;
+    transition:transform 0.5s ease-in-out;
+}
+.atv .arrow-down{
+    transform:rotateX(180deg);
+}
+.atv .question{
+    color:#222;
+    font-weight:600;
+    font-weight: 700;
+
+}
+
+.answer {
+    display: none;
+    padding:0.5rem 0 ;
+    font-size:1rem;
+    font-weight:400;
+}
+
+.show{
+    display:block;
+}
+
+
+
+
+@media(max-width:900px){
+       
+body {
+    margin: auto;
+    padding:10rem 2rem;
+}
+    .m-container {
+        width: 90%;
+        height: auto;
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:  1fr 6fr;
+        gap: 2rem;
+    }
+    
+    
+    .lt {
+        width: 100%;
+        height: 100%;
+        background: url(images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        background-position-x: 50%;
+        background-position-y: 0;
+        position: relative;
+    
+    }
+    
+    .w-container {
+        width: 50%;
+        height: 500%;
+        overflow-y: hidden;
+        margin:auto;
+    }
+    
+    .w-online {
+        display:none;
+    }
+    .box-img {
+        position: absolute;
+        left: -7rem;
+        top: 15rem;
+        display:none;
+    }
+    .mobile-img{
+        display:block;
+        width:50%;
+        position:absolute ;
+        top:-13rem;
+    }
+    
+    .rt {
+        width: 100%;
+    }
+    
+    .rt h1 {
+       text-align:center;
+    }
+    }
+
+@media(max-width:500px){
+    
+body {
+    margin: auto;
+    padding:5rem 1rem;
+}
+.m-container {
+    width: 90%;
+    height: auto;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 6fr;
+    gap: 2rem;
+}
+
+
+.lt {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position-x: 50%;
+    background-position-y: 0;
+    position: relative;
+
+}
+
+.w-container {
+    width: 50%;
+    height: 500%;
+    overflow-y: hidden;
+    margin:auto;
+}
+
+.w-online {
+    display:none;
+}
+.box-img {
+    position: absolute;
+    left: -7rem;
+    top: 15rem;
+    display:none;
+}
+.mobile-img{
+    display:block;
+    width:50%;
+    position:absolute ;
+    top:-6rem;
+}
+
+.rt {
+    width: 100%;
+}
+
+.rt h1 {
+   text-align:center;
+}
+}
